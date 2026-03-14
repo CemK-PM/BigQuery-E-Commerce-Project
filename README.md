@@ -13,7 +13,7 @@ The project utilizes the [BigQuery Public Dataset](https://console.cloud.google.
 ## 📁 Project Structure
 
 * **[Power BI Dashboard (PBIX)](Data/e-commerce.pbix)**: Main project file containing the full UI and data model.
-* **[Cleaned Dataset](Data/Cleaned Data from PowerBI.xlsx)**: Processed data exported as **Cleaned Data from Power BI**.
+* **[Cleaned Dataset](Cleaned%20Data%20from%20PowerBI.xlsx)**: Processed data exported as **Cleaned Data from Power BI**.
 * **[SQL Extraction Script](Data/BigQuery%20SQL.psql)**: The optimized BigQuery Standard SQL query.
 * **[Project Documentation (PDF)](Assets/BigQuery%20E-commerce%20PDF.pdf)**: A static report export of the dashboard pages.
 
