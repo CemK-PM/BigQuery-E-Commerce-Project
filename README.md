@@ -23,16 +23,14 @@ The project utilizes the [BigQuery Public Dataset](https://console.cloud.google.
 *A preview of the interactive dashboard featuring a custom Cartesian dot-grid background and dynamic navigation.*
 
 ## 🧠 Technical Highlights: DAX Logic
-To ensure deep analytical capabilities, I developed several custom DAX measures. *The specific code implementations for these measures are currently under detailed review:*
 
-### 1. E-commerce Conversion Funnel Logic
-Sequentially calculates user progression from initial session to final purchase to identify drop-off points.
+To ensure deep analytical capabilities, I developed several custom DAX measures that drive the dashboard's core insights:
 
-### 2. Dynamic Performance Indicators (KPIs)
-Calculates total transactions, unique customers, and average conversion rates relative to selected time periods.
+1. **E-commerce Conversion Funnel Logic:** Sequentially calculates user progression from initial session to final purchase to identify specific drop-off points across the 7-step journey.
+2. **Dynamic Performance Indicators (KPIs):** Real-time calculation of total transactions, unique customer counts, and average conversion rates relative to user-selected filters.
+3. **User Engagement Trends:** Utilizes advanced time-intelligence functions to visualize daily and weekly fluctuations in user volume and purchasing behavior.
 
-### 3. User Engagement Trends
-Visualizes daily and weekly fluctuations in user volume and purchasing behavior using time-intelligence functions.
+> 🔗 **Detailed Code Implementation:** You can explore the full implementation of all DAX measures (Conversion Rates, KPIs, and Filtering Logic) in the [Full DAX Documentation](https://github.com/CemK-PM/BigQuery-E-Commerce-Project/blob/main/DAX).
 
 ## 🚀 Key Insights
 
