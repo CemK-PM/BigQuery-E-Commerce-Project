@@ -15,7 +15,7 @@ The project utilizes the [BigQuery Public Dataset](https://console.cloud.google.
 * **[Power BI Dashboard (PBIX)](Data/e-commerce.pbix)**: Main project file containing the full UI and data model.
 * **[Cleaned Dataset](https://github.com/CemK-PM/BigQuery-E-Commerce-Project/blob/main/Data/Cleaned%20Data%20from%20PowerBI.xlsx)**: Processed data exported as **Cleaned Data from Power BI**.
 * **[SQL Extraction Script](Data/BigQuery%20SQL.psql)**: The optimized BigQuery Standard SQL query.
-* **[Project Documentation (PDF)](Assets/BigQuery%20E-commerce%20PDF.pdf)**: A static report export of the dashboard pages.
+* **[Project Documentation View 1](Assets/GA4%20E-Commerce%20First.png)** , **[View 2](Assets/GA4%20E-commerce%20second.png)** ,  **[View 3](Assets/GA4%20E-Commerce%20third%20.png)**: A static report export of the dashboard pages.
 
 ## 🖥️ Dashboard Dynamic Demo
 ![BigQuery E-commerce Analysis](Assets/BigQueryGif.gif) 
