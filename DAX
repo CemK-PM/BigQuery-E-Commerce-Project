@@ -1,0 +1,60 @@
+DEFINE
+	MEASURE 'Query1'[Purchase_Correct] = CALCULATE(
+
+			COUNTROWS('Query1'),
+
+			'Query1'[Funnel_info] = "7-Purchase"
+		)
+	MEASURE 'Query1'[Session_Start_Count] = CALCULATE(
+			COUNTROWS('Query1'),
+			'Query1'[Funnel_info] = "1-Session Start"
+		)
+	MEASURE 'Query1'[Conversion_Rate] = DIVIDE(
+			[Purchase_Correct],
+			[Session_Start_Count]
+		)
+	MEASURE 'Query1'[Unique Customers] = CALCULATE(
+			DISTINCTCOUNT('Query1'[user_pseudo_id]),
+			'Query1'[Funnel_info] = "7-Purchase"
+		)
+	MEASURE 'Query1'[3_Filter] = VAR SelectedMode = SELECTEDVALUE('date param'[date param Order])
+
+		-- We use MAX to get the date context for each point on the X-axis
+		VAR CurrentDate = MAX('Query1'[event_date])
+
+		RETURN
+			SWITCH(
+				SelectedMode,
+				-- Day Mode: Show last 15 days to see daily zigzags
+				0, IF(
+					RANKX(
+						ALL('Query1'[event_date]),
+						CurrentDate,
+						,
+						DESC
+					) <= 15,
+					1,
+					0
+				),
+
+				-- Week Mode: Show last 10 weeks to see the weekly trend flow
+				1, IF(
+					RANKX(
+						ALL('Query1'[Week]),
+						SELECTEDVALUE('Query1'[Week]),
+						,
+						DESC
+					) <= 10,
+					1,
+					0
+				)
+			)
+
+EVALUATE
+	SUMMARIZECOLUMNS(
+		"Purchase_Correct", 'Query1'[Purchase_Correct],
+		"Session_Start_Count", 'Query1'[Session_Start_Count],
+		"Conversion_Rate", 'Query1'[Conversion_Rate],
+		"Unique Customers", 'Query1'[Unique Customers],
+		"3_Filter", 'Query1'[3_Filter]
+	)
