@@ -18,7 +18,8 @@ The project utilizes the [BigQuery Public Dataset](https://console.cloud.google.
 * **[Project Documentation (PDF)](Assets/BigQuery%20E-commerce%20PDF.pdf)**: A static report export of the dashboard pages.
 
 ## 🖥️ Dashboard Dynamic Demo
-![BigQuery E-commerce Analysis](Assets/BigQueryGif.gif)
+![BigQuery E-commerce Analysis](Assets/BigQueryGif.gif) 
+
 *A preview of the interactive dashboard featuring a custom Cartesian dot-grid background and dynamic navigation.*
 
 ## 🧠 Technical Highlights: DAX Logic
